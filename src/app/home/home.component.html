@@ -1,22 +1,19 @@
 <ActionBar class="action-bar">
   <NavigationButton visibility="hidden"></NavigationButton>
   <GridLayout columns="50, *">
-    <Label class="action-bar-title" text="Homeee" colSpan="2"></Label>
+    <Label class="action-bar-title" text="Album" colSpan="2"></Label>
 
     <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label> 
   </GridLayout>
 </ActionBar>
 
 <GridLayout class="page__content">
-
-
   <ListView [items]="items">
     <ng-template let-item="item">
       <StackLayout [nsRouterLink]="['/item', item]">
         <Label [text]="item.id"></Label>
         <Label [text]="item.earth_date"></Label>
-        <Image [src]="getHttp(item.img_src)" stretch="fill"></Image>
-
+        <Image [src]="getHttp(item.img_src)" stretch="fill" height="125"></Image>
       </StackLayout>
     </ng-template>
   </ListView>

@@ -3,10 +3,10 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer'
 import { Application } from '@nativescript/core'
 
 @Component({
-  selector: 'Search',
-  templateUrl: './search.component.html',
+  selector: 'Layout',
+  templateUrl: './layout.component.html',
 })
-export class SearchComponent implements OnInit {
+export class LayoutComponent implements OnInit {
   constructor() {
     // Use the component constructor to inject providers.
   }
@@ -19,4 +19,5 @@ export class SearchComponent implements OnInit {
     const sideDrawer = <RadSideDrawer>Application.getRootView()
     sideDrawer.showDrawer()
   }
+
 }

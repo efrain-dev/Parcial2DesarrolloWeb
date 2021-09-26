@@ -28,8 +28,6 @@ export class HomeComponent implements OnInit {
   }
 
   getHttp(data) :string {
-    console.dir(data)
-
-    return 'https://imagekit.androidphoria.com/wp-content/uploads/como-buscar-una-imagen-en-facebook-con-una-foto.jpg';
+    return 'https'+data.split('http')[1];
   }
 }
