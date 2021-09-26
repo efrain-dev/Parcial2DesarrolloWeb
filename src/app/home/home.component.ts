@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     this.homeService.getItems().subscribe(
       response => {
         this.items=response.photos;
-        console.dir(this.items)
 
       },
       error => console.log(error)
@@ -26,5 +25,11 @@ export class HomeComponent implements OnInit {
   onDrawerButtonTap(): void {
     const sideDrawer = <RadSideDrawer>Application.getRootView()
     sideDrawer.showDrawer()
+  }
+
+  getHttp(data) :string {
+    console.dir(data)
+
+    return 'https://imagekit.androidphoria.com/wp-content/uploads/como-buscar-una-imagen-en-facebook-con-una-foto.jpg';
   }
 }
